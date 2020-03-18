@@ -89,3 +89,4 @@ if __name__ == '__main__':
     #lista di liste, dove ogni lista compone i vari Si
     collection = list()
     compute()
+#codiceSalvo
