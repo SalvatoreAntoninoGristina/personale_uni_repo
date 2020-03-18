@@ -15,6 +15,7 @@ def init():
 def compute():
      collection.append(codeElement)
      createFirstCollection(collection[0])
+
      i = 2
      while checkCondition() == 1:
          createCollection(collection[0], collection[i-1])
@@ -88,3 +89,5 @@ if __name__ == '__main__':
     #lista di liste, dove ogni lista compone i vari Si
     collection = list()
     compute()
+
+#prova prova
