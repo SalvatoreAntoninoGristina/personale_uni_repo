@@ -1,2 +1,2 @@
-"# provaRepo"
-modifica
+<<<<<<< HEAD
+PROVE GENERALI
