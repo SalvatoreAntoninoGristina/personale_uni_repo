@@ -90,4 +90,4 @@ if __name__ == '__main__':
     collection = list()
     compute()
 
-#prova prova funge?? ma su atom non spunta?
+#prova prova funge?? ma su atom non spunta? reak time
