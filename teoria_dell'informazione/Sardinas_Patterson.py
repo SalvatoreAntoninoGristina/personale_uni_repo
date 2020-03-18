@@ -89,5 +89,3 @@ if __name__ == '__main__':
     #lista di liste, dove ogni lista compone i vari Si
     collection = list()
     compute()
-
-#prova prova funge?? ma su atom non spunta? reak time
