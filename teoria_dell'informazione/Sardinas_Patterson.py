@@ -90,4 +90,4 @@ if __name__ == '__main__':
     collection = list()
     compute()
 
-#prova prova
+#prova prova funge??
