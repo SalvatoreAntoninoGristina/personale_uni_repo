@@ -4,6 +4,7 @@ abc abcd e dba bace ceac ceab eabd
 a c ad abb bad deb bbcde
 00 01 10 11
 0 10 110 1110
+a c ad abb bad deb bbcde
 """
 
 
@@ -18,23 +19,25 @@ def run():
     i = create_and_check_S1(table[0])    # creo S1
 
     while i != 0:
-        i = create_and_check_Sn(table[0], table[i], i)    # creo colonne finchè non arrivo ad una condizione di arresto
+        # creo colonne finchè non arrivo ad una condizione di arresto
+        i = create_and_check_Sn(table[0], table[i], i)
 
     print_table()
+
 
 def create_and_check_S1(table1):
     tmp = list()
     for elem1 in table1:
         for elem2 in table1:
             if elem1 != elem2:
-                if elem1.find(elem2) == 0:
+                if elem1.find(elem2) == 0:    # controllo se una parola è prefisso dell'altra
                     tmp.append(elem1[len(elem2):])
 
-    if len(tmp) == 0:
+    if len(tmp) == 0:    # primo caso di arresto
         print("Il codice è UD poiché S1 è vuoto")
         return 0
     else:
-        table.append(list(set(tmp)))
+        table.append(list(set(tmp)))    # aggiungo s1
 
     return 1
 
@@ -50,7 +53,7 @@ def create_and_check_Sn(S0, Si, i):
                     if elem2.find(elem1) == 0:
                         tmp.append(elem2[len(elem1):])
     if len(tmp) == 0:
-        print("Il codice è UD poiché S{} è vuoto." .format(i+1))
+        print("Il codice è UD poiché S{} è vuoto." .format(i + 1))
         return 0
     else:
         table.append(list(set(tmp)))
@@ -60,15 +63,15 @@ def create_and_check_Sn(S0, Si, i):
 
         for j in range(len(table) - 1):
             setj = set(table[j])
-            if setj == seti:
+            if setj == seti:    # secondo caso di arresto
                 print(
                     "Il codice è UD poichè l'insieme S{} è uguale all'insieme S{}".format(i + 1, j))
-                print(table[1])
+
                 return 0
 
-        if len(set0.intersection(seti)) != 0:
-            print("Il codice non è UD perchè "+
-                  "l'insieme S0 e l'insieme S{} hanno elementi in comune".format(i + 1))
+        if len(set0.intersection(seti)) != 0:    # terzo caso di arresto
+            print(
+                "Il codice non è UD perchè l'insieme S0 e l'insieme S{} hanno elementi in comune".format(i + 1))
             return 0
 
     return i + 1
@@ -76,10 +79,8 @@ def create_and_check_Sn(S0, Si, i):
 
 def print_table():
 
-        for i in range(0, len(table)):
-            print("S{}: {} ".format(i, table[i]))
-
-
+    for i in range(0, len(table)):
+        print("S{}: {} ".format(i, table[i]))
 
 
 # main dove creo una tabella e la prima colonna S0
