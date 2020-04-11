@@ -46,7 +46,7 @@ def find_I(a, input):
         j += 1
 
 
-def create_tau():
+def create_t():
     tau = list()
     for i in f:
         x = 0
@@ -75,9 +75,9 @@ def bwt_decoding():
 if __name__ == '__main__':
     f, l, i = bwt_coding("abraca")
     temp_l = l.copy()
-    t = create_tau()
+    t = create_t()
     o = bwt_decoding()
     print("F : {}".format(f))
     print("L : {}".format(l))
-    print("TAU : {} ".format(t))
+    print("T : {} ".format(t))
     print("OUTPUT : {} ".format(o))
