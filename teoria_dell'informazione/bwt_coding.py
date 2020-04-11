@@ -81,4 +81,3 @@ if __name__ == '__main__':
     print("L : {}".format(l))
     print("T : {} ".format(t))
     print("OUTPUT : {} ".format(o))
-    
