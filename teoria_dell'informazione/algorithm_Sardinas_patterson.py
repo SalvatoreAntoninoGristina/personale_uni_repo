@@ -30,8 +30,8 @@ def create_and_check_S1(table1):
     for elem1 in table1:
         for elem2 in table1:
             if elem1 != elem2:
-                if elem1.find(elem2) == 0:    # controllo se una parola è prefisso dell'altra
-                    tmp.append(elem1[len(elem2):])
+                if elem1.find(elem2) == 0:          # controllo se una parola è
+                    tmp.append(elem1[len(elem2):])  # prefisso dell'altra
 
     if len(tmp) == 0:    # primo caso di arresto
         print("Il codice è UD poiché S1 è vuoto")
